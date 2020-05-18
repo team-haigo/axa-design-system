@@ -23,7 +23,6 @@ Even if you were granted the rights : DONT PUBLISH IN `master`
 - create a branch from `master`
 - do your modifications, small and atomic commits are preferred
 - Before publishing, run `npm run build`, open locally `docs/index.html` to check it works.
-- To check if all modifications really are wanted, execute `npm run visual-diff` and go on the URL provided by percy.io
 - Commit and push `docs/*`.
 - Upgrade the `package.json` version number
 - Check that the library build is still working
@@ -32,10 +31,6 @@ Even if you were granted the rights : DONT PUBLISH IN `master`
 - - commit and push `dist/*`
 - Go on Github https://github.com/jpv-axa/book and do a Pull Request
 - A build on Travis-ci should start, it must pass
-- A percy review should be accepted
-- Have it approved
-  - by a pair programer for the code
-  - by a designer on the URL provided by percy
 
 Public demo : https://jpv-axa.github.io/book/
 
@@ -51,11 +46,11 @@ Check `dist/demo.html` for a working demo.
 
 ### Using the original sources
 
-If you are a bundler user, like Webpack or Rollup, you can directly use the source files in the `dg/components/` directory. Sources are written in Sass and ES Next. Check `package.json` and `.babelrc` to know the babel and sass versions and plugins you will need.
+If you are a bundler user, like Webpack or Rollup, you can directly use the source files in the `./src/components/` directory. Sources are written in Sass and ES Next. Check `package.json` and `.babelrc` to know the babel and sass versions and plugins you will need.
 
 ### /!\ Fonts special case
 
-We are using two fonts and their licence disallow us to distribute it to you. To be specific : the file `dg/components/materials/fonts.scss` and its built counterpart `dist/fonts.X.X.X.css` contain the font files but are here only to show a realistic demo. Licensing disallows you to use them directly.
+We are using two fonts and their licence disallow us to distribute it to you. To be specific : the file `./src/components/materials/fonts.scss` and its built counterpart `dist/fonts.X.X.X.css` contain the font files but are here only to show a realistic demo. Licensing disallows you to use them directly.
 
 You are supposed to copy or buy and host yourself the font files.
 You can download the original _Source Sans Pro Regular_ and _Source Sans Pro SemiBold_ here : https://fonts.google.com/selection?selection.family=Source+Sans+Pro:400,600. For performance reasons, please select a language and convert the files to Woff2 (for performance) and Woff (for compatibility).

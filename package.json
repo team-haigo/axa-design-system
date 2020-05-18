@@ -4,8 +4,8 @@
   "repository": "",
   "main": "index.js",
   "config": {
-    "output": "./docs",
-    "input": "./dg",
+    "output": ".out",
+    "input": "./src",
     "story_config": "./storybook",
     "dist": "./dist"
   },
@@ -17,7 +17,6 @@
     "lib-build": "npx webpack --config webpack-build-config.js",
     "lib-serve": "npx http-server $npm_package_config_dist & open http://localhost:8080/demo.html",
     "test": "npm run visual-diff",
-    "visual-diff": "percy-storybook  --build_dir $npm_package_config_output --widths=320,400,600,800,1100,1300,1600 --enable_javascript",
     "tool-update": "npx npm-check --save-exact --update --ignore @babel/*,*-loader,node-sass,webpack --specials=babel,webpack"
   },
   "author": "",
@@ -28,8 +27,6 @@
     "@babel/plugin-transform-arrow-functions": "^7.8.3",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
-    "@percy-io/in-percy": "^0.1.11",
-    "@percy/storybook": "^3.3.0",
     "@storybook/addon-notes": "^5.3.18",
     "@storybook/addon-viewport": "^5.3.18",
     "@storybook/html": "^5.3.18",
@@ -60,6 +57,7 @@
     "webpack-fix-style-only-entries": "^0.4.0"
   },
   "dependencies": {
+    "@storybook/theming": "^5.3.18",
     "@webcomponents/custom-elements": "^1.4.1",
     "@webcomponents/webcomponentsjs": "^2.4.3",
     "awesomplete": "^1.1.5",
