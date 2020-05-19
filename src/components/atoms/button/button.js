@@ -2,7 +2,7 @@
 import '@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js';
 import '@webcomponents/custom-elements';
 
-import styles from './index.scss';
+import styles from './button.scss';
 
 class AxaButton extends HTMLElement {
   static get observedAttributes() {
