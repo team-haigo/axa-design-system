@@ -1,6 +1,6 @@
 import { storiesOf, addDecorator } from '@storybook/html';
 import withCode from '../../../stories/addons/coloration';
-// import '~/components/materials/fonts.scss';
+// import '~/components/settings/fonts.scss';
 
 import './typography.scss';
 

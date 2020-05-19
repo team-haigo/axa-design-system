@@ -50,7 +50,7 @@ If you are a bundler user, like Webpack or Rollup, you can directly use the sour
 
 ### /!\ Fonts special case
 
-We are using two fonts and their licence disallow us to distribute it to you. To be specific : the file `./src/components/materials/fonts.scss` and its built counterpart `dist/fonts.X.X.X.css` contain the font files but are here only to show a realistic demo. Licensing disallows you to use them directly.
+We are using two fonts and their licence disallow us to distribute it to you. To be specific : the file `./src/components/settings/fonts.scss` and its built counterpart `dist/fonts.X.X.X.css` contain the font files but are here only to show a realistic demo. Licensing disallows you to use them directly.
 
 You are supposed to copy or buy and host yourself the font files.
 You can download the original _Source Sans Pro Regular_ and _Source Sans Pro SemiBold_ here : https://fonts.google.com/selection?selection.family=Source+Sans+Pro:400,600. For performance reasons, please select a language and convert the files to Woff2 (for performance) and Woff (for compatibility).

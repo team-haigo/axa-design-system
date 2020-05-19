@@ -9,7 +9,7 @@ const path = require('path');
 module.exports = {
   entry: {
     bundle: './index-build.js', // auto-discover the files from src/components
-    fonts: './src/components/materials/fonts.scss', // this file has 2 problems : enormous and not usable as is because of font patents
+    fonts: './src/components/settings/fonts.scss', // this file has 2 problems : enormous and not usable as is because of font patents
   },
   output: {
     path: path.resolve(__dirname, packageJSON.config.dist),

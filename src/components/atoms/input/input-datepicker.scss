@@ -1,62 +1,60 @@
-@import '../../../components/materials/colors.scss';
-@import '../../../components/materials/grids.scss';
+@import '../../../components/settings/colors.scss';
+@import '../../../components/settings/grids.scss';
 
 // axa-input
 & {
+  // our 3 options, we correct some styles coming from the original selector
+  &.is-datepicker select {
+    width: auto; // adjust to text number of characters
+    padding-right: $spacing-4;
+    background-position: calc(100% - #{$spacing-1});
+  }
 
-	// our 3 options, we correct some styles coming from the original selector
-	&.is-datepicker select {
-		width: auto; // adjust to text number of characters
-		padding-right: $spacing-4;
-		background-position: calc(100% - #{$spacing-1});
-	}
+  // the triple option container
+  .datepicker-options {
+    & span {
+      position: relative; // allows the awesomeplete to position from there
+    }
 
-	// the triple option container
-	.datepicker-options {
-		& span {
-			position: relative; // allows the awesomeplete to position from there
-		}
+    // the slashes
+    & .separator {
+      padding: $spacing-1;
+    }
+  }
 
-		// the slashes
-		& .separator {
-			padding: $spacing-1;
-		}
-	}
+  // manage states
+  // the icons are not displayed like the other inputs, so we hide the default one
+  &.is-datepicker label::after {
+    display: none;
+  }
 
-	// manage states
-	// the icons are not displayed like the other inputs, so we hide the default one
-	&.is-datepicker label::after {
-		display: none;
-	}
+  // last span in the container is the icon
+  .datepicker-options .icon::after {
+    display: inline-block;
+    width: $spacing-2;
+    margin-left: $spacing-1;
+    vertical-align: middle;
+  }
 
-	// last span in the container is the icon
-	.datepicker-options .icon::after {
-		display: inline-block;
-		width: $spacing-2;
-		margin-left: $spacing-1;
-		vertical-align: middle;
-	}
+  // icon url depends on the current state
+  &.valid .datepicker-options .icon::after {
+    content: url('../../atoms/icon/materials/check.svg');
+  }
 
-	// icon url depends on the current state
-	&.valid .datepicker-options .icon::after {
-		content: url("../../atoms/icon/materials/check.svg");
-	}
+  &.invalid .datepicker-options .icon::after {
+    content: url('../../atoms/icon/materials/error.svg');
+  }
 
-	&.invalid .datepicker-options .icon::after {
-		content: url("../../atoms/icon/materials/error.svg");
-	}
+  // correct the Awesomeplete styles
+  &.is-datepicker .awesomplete {
+    position: absolute; // relative to container span
+    left: 0;
+    width: 100%; // takes the width of the container, which happens to be the width of the <select>
+  }
 
-	// correct the Awesomeplete styles 
-	&.is-datepicker .awesomplete {
-		position: absolute; // relative to container span
-		left: 0;
-		width: 100%; // takes the width of the container, which happens to be the width of the <select>
-	}
-
-
-	// the original input has to disappear if on desktop
-	[type=date] {
-		background-color: red;
-		display: none;
-	}
+  // the original input has to disappear if on desktop
+  [type='date'] {
+    background-color: red;
+    display: none;
+  }
 }
