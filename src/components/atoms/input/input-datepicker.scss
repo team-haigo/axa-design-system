@@ -1,5 +1,5 @@
-@import '../../../components/settings/colors.scss';
-@import '../../../components/settings/grids.scss';
+@import '~/components/settings/colors.scss';
+@import '~/components/settings/grids.scss';
 
 // axa-input
 & {
@@ -38,11 +38,11 @@
 
   // icon url depends on the current state
   &.valid .datepicker-options .icon::after {
-    content: url('../../atoms/icon/materials/check.svg');
+    content: url('../../atoms/icon/images/check.svg');
   }
 
   &.invalid .datepicker-options .icon::after {
-    content: url('../../atoms/icon/materials/error.svg');
+    content: url('../../atoms/icon/images/error.svg');
   }
 
   // correct the Awesomeplete styles

@@ -177,11 +177,11 @@ $border-style: solid 1px rgba(255, 255, 255, 0.15);
         background-size: $spacing-4;
         background-repeat: no-repeat;
         background-position: right;
-        background-image: url('../../atoms/icon/materials/arrow_down.svg');
+        background-image: url('../../atoms/icon/images/arrow_down.svg');
       }
 
       &:hover::before {
-        background-image: url('../../atoms/icon/materials/arrow_up.svg');
+        background-image: url('../../atoms/icon/images/arrow_up.svg');
       }
 
       border-bottom: $border-style;

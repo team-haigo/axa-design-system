@@ -1,34 +1,36 @@
-// most of the styling has been adapted from https://github.com/LeaVerou/awesomplete/blob/gh-pages/awesomplete.css
 @import '~/components/settings/colors.scss';
 
-//@import '../../../../node_modules/awesomplete/awesomplete.css';
-// axa-input .awesomplete
-& {
-  position: relative;
+axa-input {
+  // autocomplete, generated code by external code awesomplete
+  & .awesomplete {
+    & {
+      position: relative;
 
-  [hidden] {
-    display: none;
-  }
+      [hidden] {
+        display: none;
+      }
 
-  .visually-hidden {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-  }
+      .visually-hidden {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+      }
 
-  > ul {
-    color: $color-dusty-gray;
-  }
+      > ul {
+        color: $color-dusty-gray;
+      }
 
-  > ul:empty {
-    display: none;
-  }
+      > ul:empty {
+        display: none;
+      }
 
-  mark {
-    background-color: transparent;
-    color: $color-axa-blue;
-  }
+      mark {
+        background-color: transparent;
+        color: $color-axa-blue;
+      }
 
-  input::-webkit-calendar-picker-indicator {
-    display: none;
+      input::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
   }
 }

@@ -1,35 +1,17 @@
-import { storiesOf, addDecorator } from '@storybook/html';
-import withCode from './addons/coloration';
+import { storiesOf } from '@storybook/html';
+import withCode from '../../../stories/addons/coloration';
 
-import '../components/atoms/input';
+import './input';
 
-const styles = `
-<style>
-@media (min-width: 37.5rem) {
-axa-input {
-	margin-right: 2rem;
-}
-}
-fieldset {
-	margin-bottom: 2rem;
-	padding-top: 2rem;
-	border:0;
-	padding:0 1rem;
-	margin:0;
-}
-legend {
-	padding-bottom: 2rem;
-}
-</style>
-`;
+import styles from './styles';
 
 const options = `
-		<option value="dog">Dog</option>
-		<option value="cat" selected>Cat</option>
-		<option value="hamster">Hamster</option>
-		<option value="parrot">Parrot</option>
-		<option value="spider">Spider</option>
-		<option value="goldfish">Goldfish</option>
+  <option value="dog">Dog</option>
+  <option value="cat" selected>Cat</option>
+  <option value="hamster">Hamster</option>
+  <option value="parrot">Parrot</option>
+  <option value="spider">Spider</option>
+  <option value="goldfish">Goldfish</option>
 `;
 
 const demo1 = `
