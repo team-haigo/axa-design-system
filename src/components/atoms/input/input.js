@@ -3,7 +3,8 @@ import passwordInput from './input-password';
 import autocompleteInput from './input-autocomplete';
 import selectOneInput from './input-select-one';
 import datePicker from './input-datepicker';
-import './index.scss';
+
+import './input.scss';
 
 class axaInput extends HTMLElement {
   static get observedAttributes() {

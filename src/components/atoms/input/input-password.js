@@ -1,13 +1,12 @@
 import textInput from './input-text';
 
-import svgIconReveal from '!!raw-loader!../icon/materials/eye-currentcolor.svg';
-import svgIconHide from '!!raw-loader!../icon/materials/eye_stroke-currentcolor.svg';
+import svgIconReveal from '!!raw-loader!../icon/images/eye-currentcolor.svg';
+import svgIconHide from '!!raw-loader!../icon/images/eye_stroke-currentcolor.svg';
 
 class passwordInput extends textInput {
   init() {
     super.init();
     this.prepareFieldForIcon();
-    // console.log('I’m a password')
     this.elRevealer = document.createElement('button');
     this.elRevealer.innerHTML = svgIconReveal;
     this.elRevealer.classList.add('revealer');

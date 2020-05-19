@@ -1,7 +1,8 @@
 @import '~/components/settings/colors.scss';
-@import '../typography/index.scss';
 @import '~/components/settings/grids.scss';
 @import '~/components/settings/elevation.scss';
+
+@import '~/components/atoms/typography/typography.scss';
 
 @mixin inputStyling() {
   border: 1px solid $color-silver;
@@ -28,8 +29,6 @@
   }
 }
 
-$base-zIndex: 1;
-
 axa-input {
   // placement and dimensions
   display: inline-block;
@@ -44,7 +43,7 @@ axa-input {
     width: 100%;
     display: inline-block;
     box-sizing: border-box;
-    z-index: $base-zIndex + 1;
+    z-index: $z-index-100;
   }
 
   // styling
@@ -90,11 +89,11 @@ axa-input {
   }
 
   &.valid label::after {
-    content: url('../../atoms/icon/materials/check.svg');
+    content: url('../../atoms/icon/images/check.svg');
   }
 
   &.invalid label::after {
-    content: url('../../atoms/icon/materials/error.svg');
+    content: url('../../atoms/icon/images/error.svg');
   }
 
   &.invalid input,
@@ -140,11 +139,6 @@ axa-input {
     }
   }
 
-  // autocomplete, generated code by external code awesomplete
-  & .awesomplete {
-    @import './input-autocomplete.scss';
-  }
-
   // styling for list of options (ul+li), used by autocomplete and selector
   [role='listbox'] {
     // reset
@@ -167,20 +161,16 @@ axa-input {
     &:before {
       display: block;
       content: '';
-      background-color: white;
+      background-color: $color-white;
       border: 1px solid $color-axa-blue;
       border-top: 0;
       height: $spacing-1;
-
-      //			position: relative;
       margin-top: -1 * $spacing-1;
     }
 
-    //box-shadow: $shadow-4;
-    //clip: rect(0, 8px, auto, -8px);
-    padding: 0; //$spacing-1;
-    z-index: $base-zIndex + 2;
-    background: #fff;
+    padding: 0;
+    z-index: $z-index-200;
+    background: $color-white;
     @extend .a-typo__link;
 
     li {
@@ -206,6 +196,5 @@ axa-input {
   }
 
   @import './input-select.scss';
-
   @import './input-datepicker.scss';
 }

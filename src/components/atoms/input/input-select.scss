@@ -6,7 +6,7 @@
     background-color: transparent;
     border-radius: 0;
     -webkit-appearance: none;
-    background-image: url(../icon/materials/arrow_down.svg);
+    background-image: url(../icon/images/arrow_down.svg);
     background-position: calc(100% - #{$spacing-2});
     background-size: $spacing-2;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 
     &.opened {
       border-color: $color-axa-blue;
-      background-image: url(../icon/materials/arrow_up.svg);
+      background-image: url(../icon/images/arrow_up.svg);
     }
   }
 }
