@@ -1,5 +1,5 @@
 import styles from './text-image.scss';
-import typo from '../../atoms/typography';
+import typo from '../../atoms/typography/typography';
 import 'eligrey-classlist-js-polyfill'; // needed for IE11
 
 customElements.define(

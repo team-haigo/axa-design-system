@@ -2,7 +2,9 @@
 
 > UI Framework for building ambitious products on the web.
 
-[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](link to site)
+Legacy demo : https://jpv-axa.github.io/book/
+
+![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)
 
 ## Getting started
 
@@ -32,8 +34,6 @@ Even if you were granted the rights : DONT PUBLISH IN `master`
 - Go on Github https://github.com/jpv-axa/book and do a Pull Request
 - A build on Travis-ci should start, it must pass
 
-Public demo : https://jpv-axa.github.io/book/
-
 ## Include in your project
 
 ### Using the compiled version
@@ -55,7 +55,3 @@ We are using two fonts and their licence disallow us to distribute it to you. To
 You are supposed to copy or buy and host yourself the font files.
 You can download the original _Source Sans Pro Regular_ and _Source Sans Pro SemiBold_ here : https://fonts.google.com/selection?selection.family=Source+Sans+Pro:400,600. For performance reasons, please select a language and convert the files to Woff2 (for performance) and Woff (for compatibility).
 The License for _Publico Headline Bold_ DISALLOWS us to distribute to other Axa entities the original file. Please buy a licence from Commercial Type (https://commercialtype.com/catalog/publico/publico_headline/bold), with the Woff2 option (for performance) and Woff (for compatibility).
-
-## Usage
-
-The live documentation is here : https://jpv-axa.github.io/book/. Once you have include the CSS/JS file in your project, you will be able to use the code as demonstrated in the "How to Code That?" tab of each demo.

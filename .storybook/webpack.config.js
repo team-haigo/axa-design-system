@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 
 // Export a function. Accept the base config as the only param.
 module.exports = async ({ config, mode }) => {
@@ -11,32 +11,32 @@ module.exports = async ({ config, mode }) => {
       test: /\.scss$/,
       loaders: [
         {
-          loader: 'style-loader'
+          loader: 'style-loader',
         },
         {
           loader: 'css-loader',
           options: {
-            sourceMap: true
-          }
+            sourceMap: true,
+          },
         },
         {
           loader: 'resolve-url-loader', // rewrite correctly the url() found by sass
           options: {
             //debug: true,
-            sourceMap: true
-          }
+            sourceMap: true,
+          },
         },
         {
           loader: 'sass-loader',
           options: {
             sassOptions: {
-              includePaths: [path.resolve(__dirname, '../')]
+              includePaths: [path.resolve(__dirname, '../')],
             },
-            sourceMap: true
-          }
-        }
+            sourceMap: true,
+          },
+        },
       ],
-      include: path.resolve(__dirname, '../')
+      include: path.resolve(__dirname, '../'),
     },
     {
       test: /\.js$/,
@@ -46,42 +46,43 @@ module.exports = async ({ config, mode }) => {
       loaders: [
         {
           loader: 'babel-loader',
-          options: require('./.babelrc.js')
-        }
+          options: require('./.babelrc.js'),
+        },
       ],
-      include: path.resolve(__dirname, '../')
+      include: path.resolve(__dirname, '../'),
     },
     {
       test: /\.css$/,
       loaders: [
         {
-          loader: 'style-loader'
+          loader: 'style-loader',
         },
         {
           loader: 'css-loader',
           options: {
-            sourceMap: true
-          }
+            sourceMap: true,
+          },
         },
         {
           loader: 'raw-loader',
           options: {
-            sourceMap: true
-          }
-        }
-      ]
+            sourceMap: true,
+          },
+        },
+      ],
     },
     {
       test: /\.(woff2?)$/,
       use: [
         {
           loader: 'file-loader',
-          options: {}
-        }
-      ]
+          options: {},
+        },
+      ],
     }
-  )
+  );
 
+  config.resolve.alias['~'] = path.resolve('./src');
   // Return the altered config
-  return config
-}
+  return config;
+};

@@ -2,9 +2,9 @@
 
 // Breakpoints
 $breakpoint-S-pixels: 600;
-$breakpoint-S: ($breakpoint-S-pixels /16) * 1rem; // 600px = 37.5rem
+$breakpoint-S: ($breakpoint-S-pixels / 16) * 1rem; // 600px = 37.5rem
 $breakpoint-M-pixels: 1024;
-$breakpoint-M: ($breakpoint-M-pixels /16) * 1rem; // 1024px = 64rem
+$breakpoint-M: ($breakpoint-M-pixels / 16) * 1rem; // 1024px = 64rem
 $breakpoint-L: 80rem; // 1280px;
 // $breakpoint-XL: 1440px;
 $breakpoint-MAX: 99rem; // 1584px
@@ -18,4 +18,4 @@ $spacing-4: 2rem; // 32px
 $spacing-5: 2.5rem; // 40px
 $spacing-6: 3rem; // 48px
 
-$gutter : 1rem;
+$gutter: 1rem;

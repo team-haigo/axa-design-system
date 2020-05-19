@@ -1,5 +1,5 @@
 import styles from './index.scss';
-import typo from '../../atoms/typography';
+import typo from '../../atoms/typography/typography';
 import AxaButton from '../../atoms/button';
 import 'eligrey-classlist-js-polyfill'; // needed for IE11
 import imgPlaceholder from './1600x900.svg';
