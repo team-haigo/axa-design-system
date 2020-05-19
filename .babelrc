@@ -1,13 +1,16 @@
 {
   "presets": [
-    ["@babel/preset-env", {
-      "useBuiltIns": "entry",
-      "forceAllTransforms": true,
-      "corejs": 3,
-      "targets": {
-        "ie": 11,
-      },
-    }],
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry",
+        "forceAllTransforms": true,
+        "corejs": 3,
+        "targets": {
+          "ie": 11
+        }
+      }
+    ],
     "@babel/preset-react"
   ],
   "plugins": ["@babel/plugin-transform-arrow-functions"]
