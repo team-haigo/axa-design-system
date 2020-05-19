@@ -1,4 +1,4 @@
-import './index.scss';
+import './tabs.scss';
 
 class axaTabs extends HTMLElement {
   constructor() {
@@ -133,4 +133,5 @@ function getOrSetId(el) {
 }
 
 customElements.define('axa-tabs', axaTabs);
+
 export default axaTabs;

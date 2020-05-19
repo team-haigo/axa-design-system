@@ -32,6 +32,6 @@ const demo1 = `
 </axa-form>
 `;
 
-storiesOf('Organism|Form', module)
+storiesOf('Organism/Form', module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Personal informations (text + datepicker + selector)', () => demo1);

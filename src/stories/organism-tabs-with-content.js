@@ -5,11 +5,12 @@ import imageDark from './images/landlord-hero-3.jpg';
 
 import withCode from './addons/coloration';
 
-const demo1 = `<axa-tabs>
-<ul>
-	<li aria-controls=text>See latest article</li>
-	<li aria-controls=form>Register</li>
-</ul>
+const demo1 = `
+<axa-tabs>
+  <ul>
+    <li aria-controls=text>See latest article</li>
+    <li aria-controls=form>Register</li>
+  </ul>
 </axa-tabs>
 
 <axa-text-image id=text>
@@ -18,12 +19,13 @@ const demo1 = `<axa-tabs>
 	<img src=${imageWhite} />
 </axa-text-image>
 
-<form id=form onsubmit="alert('submited');return false;">
+<form id=form onsubmit="alert('submited'); return false;">
 
-	<axa-input +label="Your full name" >
+  <axa-input +label="Your full name">
 		<input type=text placeholder="Eg: Dr. Livingstone, Frank Enstein, ಅಭಿಷೇಕ್…" />
 		<p slot=info>How should we name you?</p>
-	</axa-input>
+  </axa-input>
+
 	<axa-input +label="Your gender">
 		<select>
 			<option>Not Provided</option>
@@ -39,22 +41,22 @@ const demo1 = `<axa-tabs>
 </form>
 
 <style>
-@media (min-width: 37.5rem) {
-axa-input {
-	margin-right: 2rem;
-}
-}
-form {
-	padding: 1rem;
-}
-p {
-	padding:0;
-	margin:0;
-}
+  @media (min-width: 37.5rem) {
+    axa-input {
+      margin-right: 2rem;
+    }
+  }
+  form {
+    padding: 1rem;
+  }
+  p {
+    padding:0;
+    margin:0;
+  }
 </style>
 
 `;
 
-storiesOf('Organism|Tabs with content', module)
+storiesOf('Organism/Tabs with content', module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Text and Form', () => demo1);

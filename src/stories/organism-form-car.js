@@ -110,7 +110,7 @@ ${carMakesModelsEmpty}
 </form>
 `;
 
-storiesOf('Organism|Form', module)
+storiesOf('Organism/Form', module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Car maker-model dynamic example', () => {
     window.onSubmit = function () {

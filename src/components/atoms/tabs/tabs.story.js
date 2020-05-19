@@ -1,20 +1,20 @@
-import { storiesOf, addDecorator } from '@storybook/html';
-import withCode from './addons/coloration';
+import { storiesOf } from '@storybook/html';
+import withCode from '../../../stories/addons/coloration';
 
-import '../components/atoms/tabs';
+import './tabs';
 
 const styles = `
-<style>
-.a-tabcontainer {
-	border: 1px solid green;
-}
-div p:first-child {
-	margin-top:0;
-}
-div p:last-child {
-	margin-bottom:0;
-}
-</style>
+  <style>
+    .a-tabcontainer {
+      border: 1px solid green;
+    }
+    div p:first-child {
+      margin-top:0;
+    }
+    div p:last-child {
+      margin-bottom:0;
+    }
+  </style>
 `;
 
 const content_1 = `

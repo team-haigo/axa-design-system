@@ -1,4 +1,4 @@
-import { storiesOf, addDecorator } from '@storybook/html';
+import { storiesOf } from '@storybook/html';
 import withCode from '../../../stories/addons/coloration';
 // import '~/components/settings/fonts.scss';
 

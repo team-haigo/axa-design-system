@@ -11,7 +11,7 @@ const demo1 = `<axa-header-menu></axa-header-menu>
 <axa-hero-cover></axa-hero-cover>
 <axa-footer></axa-footer>`;
 
-storiesOf('Organism|Header, Footer, Hero Cover, Text & Image', module)
+storiesOf('Organism/Header, Footer, Hero Cover, Text & Image', module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Default values', () => demo1);
 
@@ -83,6 +83,6 @@ const demo2 = `<axa-header-menu  +searchable>
 	</ul>
 </axa-footer>`;
 
-storiesOf('Organism|Header, Footer, Hero Cover, Text & Image', module)
+storiesOf('Organism/Header, Footer, Hero Cover, Text & Image', module)
   .addDecorator(withCode(demo2, 'html'))
   .add('With content', () => demo2);

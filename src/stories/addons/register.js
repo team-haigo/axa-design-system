@@ -97,6 +97,7 @@ const registerTab = ({ label, type }) => {
     });
   });
 };
+
 export const setTabs = (tabs) => {
   const tabsToRender = [].concat(tabs);
   tabsToRender.forEach((t) => registerTab(t));

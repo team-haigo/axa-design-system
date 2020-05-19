@@ -1,5 +1,4 @@
 @import '~/components/settings/grids.scss';
-@import '../typography/index.scss';
 @import '~/components/settings/colors.scss';
 
 $selected-bar-height: 4px;
@@ -15,7 +14,6 @@ axa-tabs {
     padding: 0;
     margin: 0;
 
-    //
     // all LI on one line, add horizontal scrolling if needed
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -30,7 +28,6 @@ axa-tabs {
     // resets
     list-style: none;
 
-    @extend .a-typo__menu-item;
     color: $color-axa-blue;
 
     padding: $spacing-3 $spacing-2;
@@ -75,5 +72,21 @@ axa-tabs {
   }
 }
 
-// companion styles, for the target container
-@import './container.scss';
+.a-tabcontainer {
+  max-width: $breakpoint-MAX;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: $spacing-2;
+
+  &--space-none {
+    padding: 0;
+  }
+
+  &--space-horizontal {
+    padding: 0 $spacing-2;
+  }
+
+  &--space-vertical {
+    padding: $spacing-2 0;
+  }
+}

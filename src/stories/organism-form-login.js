@@ -24,6 +24,6 @@ const demo1 = `
 <axa-form>
 `;
 
-storiesOf('Organism|Form', module)
+storiesOf('Organism/Form', module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Login password', () => demo1);

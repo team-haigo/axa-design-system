@@ -1,5 +1,4 @@
 import { storiesOf } from '@storybook/html';
-import { withConsole } from '@storybook/addon-console';
 
 import './button';
 

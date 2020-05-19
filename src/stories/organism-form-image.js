@@ -74,7 +74,7 @@ window.onSubmit = function () {
   return false;
 };
 
-storiesOf('Organism|Form', module)
+storiesOf('Organism/Form', module)
   .addDecorator(withCode(demo1, 'html'))
   .addDecorator(withCode(css, 'scss'))
   .add('Form with illustration image', () => demo1);

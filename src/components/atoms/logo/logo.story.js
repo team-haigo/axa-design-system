@@ -5,6 +5,7 @@ import imageWhite from '~/images/home-hero-8.jpg';
 import imageDark from '~/images/landlord-hero-3.jpg';
 
 import './logo.scss';
+import './logo.js';
 
 const demo1 = `<axa-logo></axa-logo>`;
 
