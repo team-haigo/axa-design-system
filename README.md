@@ -4,7 +4,7 @@
 
 Legacy demo : https://jpv-axa.github.io/book/
 
-![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)
+![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg) • [![Netlify Status](https://api.netlify.com/api/v1/badges/a83df7bc-b1ab-473f-94e8-e1fb6c66bbbe/deploy-status)](https://app.netlify.com/sites/axa-design-system/deploys)
 
 ## Getting started
 
