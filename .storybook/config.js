@@ -1,5 +1,6 @@
-import { configure, addParameters } from '@storybook/html';
+import { addDecorator, addParameters } from '@storybook/html';
 import { create } from '@storybook/theming';
+import { checkA11y } from '@storybook/addon-a11y';
 
 import brandLogo from '../src/components/atoms/logo/images/a-logo--default.svg';
 
@@ -16,3 +17,5 @@ addParameters({
     }),
   },
 });
+
+addDecorator(checkA11y);

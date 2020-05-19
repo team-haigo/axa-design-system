@@ -1,26 +1,26 @@
-import svgSearch from '!!raw-loader!./materials/search-currentcolor.svg';
-import svgClose from '!!raw-loader!./materials/close-currentcolor.svg';
-import svgMenu from '!!raw-loader!./materials/menu-currentcolor.svg';
-import logoFacebook from '!!raw-loader!./materials/logo_facebook-currentcolor.svg';
-import logoLinkedin from '!!raw-loader!./materials/logo_linkedin-currentcolor.svg';
-import logoInstagram from '!!raw-loader!./materials/logo_instagram-currentcolor.svg';
-import logoTwitter from '!!raw-loader!./materials/logo_twitter-currentcolor.svg';
-import logoYoutube from '!!raw-loader!./materials/logo_youtube-currentcolor.svg';
-import eye from '!!raw-loader!./materials/eye-currentcolor.svg';
-import house from '!!raw-loader!./materials/house-currentcolor.svg';
-import more_horiz from '!!raw-loader!./materials/more_horiz-currentcolor.svg';
-import more_vert from '!!raw-loader!./materials/more_vert-currentcolor.svg';
-import credit_card from '!!raw-loader!./materials/credit_card-currentcolor.svg';
-import car from '!!raw-loader!./materials/car-currentcolor.svg';
-import flight from '!!raw-loader!./materials/flight-currentcolor.svg';
-import health from '!!raw-loader!./materials/health-currentcolor.svg';
-
-import notFound from '!!raw-loader!./materials/not_interested-currentcolor.svg';
+import svgSearch from '!!raw-loader!./images/search-currentcolor.svg';
+import svgClose from '!!raw-loader!./images/close-currentcolor.svg';
+import svgMenu from '!!raw-loader!./images/menu-currentcolor.svg';
+import logoFacebook from '!!raw-loader!./images/logo_facebook-currentcolor.svg';
+import logoLinkedin from '!!raw-loader!./images/logo_linkedin-currentcolor.svg';
+import logoInstagram from '!!raw-loader!./images/logo_instagram-currentcolor.svg';
+import logoTwitter from '!!raw-loader!./images/logo_twitter-currentcolor.svg';
+import logoYoutube from '!!raw-loader!./images/logo_youtube-currentcolor.svg';
+import eye from '!!raw-loader!./images/eye-currentcolor.svg';
+import house from '!!raw-loader!./images/house-currentcolor.svg';
+import more_horiz from '!!raw-loader!./images/more_horiz-currentcolor.svg';
+import more_vert from '!!raw-loader!./images/more_vert-currentcolor.svg';
+import credit_card from '!!raw-loader!./images/credit_card-currentcolor.svg';
+import car from '!!raw-loader!./images/car-currentcolor.svg';
+import flight from '!!raw-loader!./images/flight-currentcolor.svg';
+import health from '!!raw-loader!./images/health-currentcolor.svg';
+import notFound from '!!raw-loader!./images/not_interested-currentcolor.svg';
 
 class axaIcon extends HTMLElement {
   static get observedAttributes() {
     return ['icon', '+icon'];
   }
+
   attributeChangedCallback(attr, old, value) {
     //debugger
     if (old === value) return;

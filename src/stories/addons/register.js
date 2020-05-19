@@ -16,7 +16,6 @@ class Code extends React.Component {
     this.state = {
       code: '',
     };
-    //console.log("constructor type : " + props.type);
     this.channelName = `soft/code/add_${props.type}`;
     this.onSelectTab = this.onSelectTab.bind(this);
   }
@@ -24,7 +23,6 @@ class Code extends React.Component {
   onSelectTab({ code, type }) {
     const formattedCode =
       type && code && Prism.highlight(code, Prism.languages[type]);
-    //console.log("select tab of type : " + type + " and code : " + code);
     this.setState({
       code: formattedCode,
     });
@@ -34,7 +32,6 @@ class Code extends React.Component {
     const { channel, api } = this.props;
     channel.on(this.channelName, this.onSelectTab);
 
-    //console.log("component did mount for channel : " + this.channelName);
     this.stopListeningOnStory = api.on(STORY_CHANGED, () => {
       this.onSelectTab('');
     });
