@@ -1,10 +1,8 @@
-# Axa design system
+# Axa design system • ![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg) • [![Netlify Status](https://api.netlify.com/api/v1/badges/cefa44b9-8174-4149-9948-4d084048339b/deploy-status)](https://app.netlify.com/sites/axa-design-system/deploys)
 
 > UI Framework for building ambitious products on the web.
 
 Legacy demo : https://jpv-axa.github.io/book/
-
-![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg) • [![Netlify Status](https://api.netlify.com/api/v1/badges/a83df7bc-b1ab-473f-94e8-e1fb6c66bbbe/deploy-status)](https://app.netlify.com/sites/axa-design-system/deploys)
 
 ## Getting started
 
@@ -16,7 +14,9 @@ npm start
 
 Now go to `http://localhost:58044` in your browser.
 
-- create a branch from `master`
+---
+
+🔥 this
 
 ## Publishing the demo
 
