@@ -60,6 +60,6 @@ const demo1 = `
 
 
 `;
-storiesOf(`Atoms|Inputs`, module)
+storiesOf(`Atoms/Inputs`, module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Autocomplete', () => demo1 + styles);

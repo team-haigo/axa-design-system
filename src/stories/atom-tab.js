@@ -75,7 +75,7 @@ const demo1_2 = `
 </axa-tabs>
 `;
 
-storiesOf(`Atoms|Tabs`, module)
+storiesOf(`Atoms/Tabs`, module)
   .addDecorator(withCode(demo1_1 + content_1 + demo1_2 + content_2, 'html'))
   .add(
     'Normal use cases',
@@ -147,7 +147,7 @@ const demo3_1 = `
 </div>
 `;
 
-storiesOf(`Atoms|Tabs`, module)
+storiesOf(`Atoms/Tabs`, module)
   .addDecorator(
     withCode(demo2_1 + demo2_2 + content_1 + content_2 + demo3_1, 'html')
   )

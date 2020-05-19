@@ -69,7 +69,7 @@ const demo1 = `
 
 </fieldset>
 `;
-storiesOf(`Atoms|Inputs`, module)
+storiesOf(`Atoms/Inputs`, module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Date Picker', () => demo1 + styles);
 
@@ -96,6 +96,6 @@ const demo2 = `
 
 </fieldset>
 `;
-storiesOf(`Atoms|Inputs`, module)
+storiesOf(`Atoms/Inputs`, module)
   .addDecorator(withCode(demo2, 'html'))
   .add('Date Picker with error / success / disabled', () => demo2 + styles);

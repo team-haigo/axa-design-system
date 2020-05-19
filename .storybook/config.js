@@ -1,7 +1,7 @@
 import { configure, addParameters } from '@storybook/html';
 import { create } from '@storybook/theming';
 
-import brandLogo from '../src/components/atoms/logo/materials/a-logo--default.svg';
+import brandLogo from '../src/components/atoms/logo/images/a-logo--default.svg';
 
 addParameters({
   readme: {

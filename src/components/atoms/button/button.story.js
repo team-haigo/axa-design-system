@@ -12,4 +12,4 @@ let code = `
   </p>
 `;
 
-storiesOf(`Atoms|Buttons`, module).add('All variations', () => code);
+storiesOf(`Atoms/Buttons`, module).add('All variations', () => code);

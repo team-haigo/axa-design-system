@@ -59,7 +59,7 @@ const demo1 = `
 
 </fieldset>
 `;
-storiesOf(`Atoms|Inputs`, module)
+storiesOf(`Atoms/Inputs`, module)
   .addDecorator(withCode(demo1, 'html'))
   .add('Selector', () => demo1 + styles);
 
@@ -90,6 +90,6 @@ const demo2 = `
 </fieldset>
 `;
 
-storiesOf(`Atoms|Inputs`, module)
+storiesOf(`Atoms/Inputs`, module)
   .addDecorator(withCode(demo2, 'html'))
   .add('Selector with error / success / Disabled', () => demo2 + styles);

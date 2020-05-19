@@ -6,7 +6,7 @@ You can use this content directly in a Note panel and see how it is intepreted
 ```javascript
 import buttonMarkdown from '!raw-loader!../images/markdownCheatSheet.markdown';
 let code = `<axa-button>Primary button</axa-button>`;
-storiesOf(`Atoms|Buttons`, module).add('All variations', () => code, {
+storiesOf(`Atoms/Buttons`, module).add('All variations', () => code, {
   notes: {
     markdown: buttonMarkdown,
   },

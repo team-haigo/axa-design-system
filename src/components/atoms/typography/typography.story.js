@@ -20,7 +20,7 @@ const demo1 = `
 	<h5 class="a-typo__text-title" title=".a-typo__text-title">Text Title - H5</h5>
 `;
 
-storiesOf(`Atoms|Typography`, module)
+storiesOf(`Atoms/Typography`, module)
   .addDecorator(withCode(demo1, 'html'))
   .addDecorator((code) => code() + styles)
   .add('Titles', () => {
@@ -49,7 +49,7 @@ const demo2 = `
 	<p><span class="a-typo__legals" title=".a-typo__legals">Legals</span></p>
 `;
 
-storiesOf(`Atoms|Typography`, module)
+storiesOf(`Atoms/Typography`, module)
   .addDecorator(withCode(demo2, 'html'))
   .addDecorator((code) => code() + styles)
   .add('Texts', () => {
@@ -79,4 +79,4 @@ const demo3 = `
 <h1 class="a-typo__event-title a-typo__relative-spacing-top__2" title=.a-typo__event-title>Know You Can</h1>
 `;
 
-storiesOf(`Atoms|Typography`, module).add('Long texts demo', () => demo3);
+storiesOf(`Atoms/Typography`, module).add('Long texts demo', () => demo3);

@@ -1,217 +1,211 @@
-@import '../../materials/colors.scss';
+@import '~/components/settings/colors.scss';
 @import '../typography/index.scss';
-@import '../../materials/grids.scss';
-@import '../../materials/elevation.scss';
+@import '~/components/settings/grids.scss';
+@import '~/components/settings/elevation.scss';
 
+@mixin inputStyling() {
+  border: 1px solid $color-silver;
+  padding: $spacing-1 $spacing-2;
+  margin: $spacing-1 0;
+  box-sizing: border-box;
+  height: $spacing-6;
 
-@mixin inputStyling () {
+  &::placeholder {
+    color: $color-dusty-gray;
+  }
 
-	border: 1px solid $color-silver;
-	padding: $spacing-1 $spacing-2;
-	margin: $spacing-1 0;
-	box-sizing: border-box;
-	height: $spacing-6;
+  &:hover {
+    border-color: $color-axa-blue;
+  }
 
-	&::placeholder {
-		color: $color-dusty-gray;
-	}
+  &[disabled] {
+    color: $color-dusty-gray;
+    background-color: $color-alabaster;
 
-	&:hover {
-		border-color: $color-axa-blue;
-	}
-
-	&[disabled] {
-		color: $color-dusty-gray;
-		background-color: $color-alabaster;
-
-		&:hover {
-			border-color: $color-silver;
-		}
-	}
-
+    &:hover {
+      border-color: $color-silver;
+    }
+  }
 }
 
 $base-zIndex: 1;
 
 axa-input {
-	// placement and dimensions
-	display: inline-block;
-	vertical-align: top;
-	min-width: 18rem;
-	max-width: 23.75rem;
-	width: calc(100% - #{$spacing-1});
+  // placement and dimensions
+  display: inline-block;
+  vertical-align: top;
+  min-width: 18rem;
+  max-width: 23.75rem;
+  width: calc(100% - #{$spacing-1});
 
-	label,
-	input,
-	select {
-		width: 100%;
-		display: inline-block;
-		box-sizing: border-box;
-		z-index: $base-zIndex + 1;
-	}
+  label,
+  input,
+  select {
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    z-index: $base-zIndex + 1;
+  }
 
-	// styling
-	input,
-	select {
-		@extend .a-typo__text;
-		@include inputStyling();
+  // styling
+  input,
+  select {
+    @extend .a-typo__text;
+    @include inputStyling();
+  }
 
-	}
+  [slot='info'],
+  [role='alert'] {
+    display: block;
+    padding: 0;
+    margin: 0;
+    @extend .a-typo__legals;
+  }
 
-	[slot=info],
-	[role=alert] {
-		display: block;
-		padding: 0;
-		margin: 0;
-		@extend .a-typo__legals;
-	}
+  label {
+    @extend .a-typo__label;
+    position: relative; // for positioning the status icons
 
-	label {
-		@extend .a-typo__label;
-		position: relative; // for positioning the status icons
+    &::after {
+      // will contain success or error icons
+      width: $spacing-2;
+      right: $spacing-1;
+      bottom: 0;
+      display: block;
+      position: absolute;
+    }
+  }
 
-		&::after {
-			// will contain success or error icons
-			width: $spacing-2;
-			right: $spacing-1;
-			bottom: 0;
-			display: block;
-			position: absolute;
-		}
-	}
+  // manage states
+  &.disabled {
+    label,
+    .revealer {
+      color: $color-dusty-gray;
+    }
+  }
 
-	// manage states
-	&.disabled {
+  &.valid input,
+  &.valid select {
+    border-color: $color-malachite;
+  }
 
-		label,
-		.revealer {
-			color: $color-dusty-gray;
-		}
-	}
+  &.valid label::after {
+    content: url('../../atoms/icon/materials/check.svg');
+  }
 
-	&.valid input,
-	&.valid select {
-		border-color: $color-malachite;
-	}
+  &.invalid label::after {
+    content: url('../../atoms/icon/materials/error.svg');
+  }
 
-	&.valid label::after {
-		content: url("../../atoms/icon/materials/check.svg");
-	}
+  &.invalid input,
+  &.invalid select {
+    border-color: $color-shy-tomato;
+  }
 
-	&.invalid label::after {
-		content: url("../../atoms/icon/materials/error.svg");
-	}
+  [role='alert'] {
+    color: $color-shy-tomato;
+  }
 
-	&.invalid input,
-	&.invalid select {
-		border-color: $color-shy-tomato;
-	}
+  // code for the password revealer
+  .revealer {
+    color: $color-axa-blue;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: $spacing-4;
+    height: $spacing-4;
+  }
 
-	[role=alert] {
-		color: $color-shy-tomato;
-	}
+  .with-icon {
+    // disguise the container as an input
+    background-color: $color-white;
+    @include inputStyling();
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
 
-	// code for the password revealer
-	.revealer {
-		color: $color-axa-blue;
-		background-color: transparent;
-		padding: 0;
-		margin: 0;
-		border: 0;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		width: $spacing-4;
-		height: $spacing-4;
-	}
+    & input,
+    & select {
+      // reset our input
+      border: 0;
+      margin: 0;
+      padding: 0;
+      height: calc(
+        #{$spacing-6} - 2px
+      ); // height of the original input minus the borders
+    }
+  }
 
-	.with-icon {
-		// disguise the container as an input
-		background-color: $color-white;
-		@include inputStyling();
-		padding-top: 0;
-		padding-bottom: 0;
-		display: flex;
-		align-items: center;
+  // autocomplete, generated code by external code awesomplete
+  & .awesomplete {
+    @import './input-autocomplete.scss';
+  }
 
-		& input,
-		& select {
-			// reset our input
-			border: 0;
-			margin: 0;
-			padding: 0;
-			height: calc(#{$spacing-6} - 2px); // height of the original input minus the borders
-		}
-	}
+  // styling for list of options (ul+li), used by autocomplete and selector
+  [role='listbox'] {
+    // reset
+    list-style: none;
+    margin: 0;
+    // positionning
+    position: absolute;
+    left: 0;
+    border: 0;
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-top: -1 * $spacing-1;
+    // 3.5 lines max. One line height = 2 vert. padding + 1 line-height
+    max-height: 3.5 * (2 * $spacing-2 + 1.4rem);
+    overflow-y: auto;
+    // decorate
+    box-shadow: $shadow-4;
 
-	// autocomplete, generated code by external code awesomplete
-	& .awesomplete {
-		@import './input-autocomplete.scss';
+    // Dummy element to hide the top shadow
+    &:before {
+      display: block;
+      content: '';
+      background-color: white;
+      border: 1px solid $color-axa-blue;
+      border-top: 0;
+      height: $spacing-1;
 
-	}
+      //			position: relative;
+      margin-top: -1 * $spacing-1;
+    }
 
-	// styling for list of options (ul+li), used by autocomplete and selector
-	[role=listbox] {
-		// reset
-		list-style: none;
-		margin: 0;
-		// positionning
-		position: absolute;
-		left: 0;
-		border: 0;
-		min-width: 100%;
-		box-sizing: border-box;
-		margin-top: -1* $spacing-1;
-		// 3.5 lines max. One line height = 2 vert. padding + 1 line-height
-		max-height: 3.5 * (2*$spacing-2 + 1.4rem);
-		overflow-y: auto;
-		// decorate
-		box-shadow: $shadow-4;
+    //box-shadow: $shadow-4;
+    //clip: rect(0, 8px, auto, -8px);
+    padding: 0; //$spacing-1;
+    z-index: $base-zIndex + 2;
+    background: #fff;
+    @extend .a-typo__link;
 
-		// Dummy element to hide the top shadow
-		&:before {
-			display: block;
-			content: "";
-			background-color: white;
-			border: 1px solid $color-axa-blue;
-			border-top: 0;
-			height: $spacing-1;
+    li {
+      padding: $spacing-2;
+      position: relative;
 
-			//			position: relative;
-			margin-top: -1* $spacing-1;
-		}
+      // separation between elements
+      & + li::before {
+        content: '';
+        border-top: 1px solid $color-mercury;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: $spacing-1;
+        right: $spacing-1;
+      }
 
-		//box-shadow: $shadow-4;
-		//clip: rect(0, 8px, auto, -8px);
-		padding: 0; //$spacing-1;
-		z-index: $base-zIndex+2;
-		background: #fff;
-		@extend .a-typo__link;
+      &[aria-selected='true'],
+      &:hover {
+        background-color: $color-mercury;
+      }
+    }
+  }
 
+  @import './input-select.scss';
 
-		li {
-			padding: $spacing-2;
-			position: relative;
-
-			// separation between elements
-			&+li::before {
-				content: '';
-				border-top: 1px solid $color-mercury;
-				display: block;
-				position: absolute;
-				top: 0;
-				left: $spacing-1;
-				right: $spacing-1;
-			}
-
-			&[aria-selected=true],
-			&:hover {
-				background-color: $color-mercury;
-			}
-
-		}
-	}
-
-	@import './input-select.scss';
-
-	@import './input-datepicker.scss'
+  @import './input-datepicker.scss';
 }

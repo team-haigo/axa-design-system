@@ -1,6 +1,6 @@
-@import '../../materials/grids.scss';
-@import '../../materials/colors.scss';
-@import '../../materials/typography.scss';
+@import '~/components/settings/grids.scss';
+@import '~/components/settings/colors.scss';
+@import '~/components/settings/typography.scss';
 
 // separate buttons next to each other
 .a-button + .a-button {
