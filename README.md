@@ -3,6 +3,7 @@
 > UI Framework for building ambitious products on the web.
 
 ✨ New demo : https://axa-design-system.netlify.app/
+
 🧟‍♂️ Legacy demo : https://jpv-axa.github.io/book/
 
 ## Getting started
@@ -18,22 +19,6 @@ Now go to `http://localhost:58044` in your browser.
 ---
 
 🔥 this
-
-## Publishing the demo
-
-Even if you were granted the rights : DONT PUBLISH IN `master`
-
-- create a branch from `master`
-- do your modifications, small and atomic commits are preferred
-- Before publishing, run `npm run build`, open locally `docs/index.html` to check it works.
-- Commit and push `docs/*`.
-- Upgrade the `package.json` version number
-- Check that the library build is still working
-- - run `npm run lib-build` then `npm run lib-serve`
-- - open http://localhost:8080/demo.html to check components still work with the JS/CSS bundles only
-- - commit and push `dist/*`
-- Go on Github https://github.com/jpv-axa/book and do a Pull Request
-- A build on Travis-ci should start, it must pass
 
 ## Include in your project
 
